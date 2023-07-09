@@ -41,7 +41,7 @@ Create an array represents your:
 2- Favorite Sport (3)
 3- Favorite Movie (2)
 */
-const favf = [ "Watermelon", "blueberry"]
+const favf = [ "Biryani", "Beef burger"]
 console.log(favf);
 const favs = [ "Basketball", "Swimming" , "Tennis"]
 console.log(favs);
