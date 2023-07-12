@@ -15,6 +15,7 @@ while (i<8){
     }
       i++;
 }
+
 console.log('\n \n')
 
 
@@ -35,7 +36,7 @@ console.log('\n \n')
 s=" ";
 for(let a=1; a<9;a++){
     for(let j=1 ; j<=a ; j++){
-     s+=j;    
+     s+=j+" ";    
 }
   s+=`<br>`
 }
@@ -52,6 +53,7 @@ let c = "don’t know why";
  if (c.includes("y")){
     console.log("Yes")
  }
+ 
  else {
     console.log ("No")
  }

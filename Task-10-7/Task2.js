@@ -11,18 +11,18 @@ let x=88;
 if(x<50){
     alert("Fail")
 }
-else if ( x>=50 && x<=59){
+else if (x<=59){
     alert("E")
 }
-else if ( x>=60 && x<=69){
+else if (x<=69){
     alert("D")
 }
-else if ( x>=70 && x<=79){
+else if (x<=79){
     alert("C")
 }
-else if ( x>=80 && x<=89){
+else if (x<=89){
     alert("B")
 }
-else if ( x>=90 && x<=100){
+else if (x<=100){
     alert("A")
 }
