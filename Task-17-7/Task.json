@@ -1,0 +1,41 @@
+[
+    {
+        "Name" : "Sereen",
+        "Age" : 23,
+        "Major" : "Communication Engineering",
+        "University" : "Yarmouk University",
+        "Image" : "https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
+    },
+
+    {
+        "Name" : "Shatha",
+        "Age" : 22,
+        "Major" : "Communication Engineering",
+        "University" : "Yarmouk University",
+        "Image" : "https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
+    },
+
+    {
+        "Name" : "Razan",
+        "Age" : 21,
+        "Major" : "Computer Engineering",
+        "University" : "Jordanian University",
+        "Image" : "https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
+    },
+
+    {
+        "Name" : "Ola",
+        "Age" : 25,
+        "Major" : "English",
+        "University" : "Jordanian University",
+        "Image" : "https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
+    },
+
+    {
+        "Name" : "Lara",
+        "Age" : 28,
+        "Major" : "Pharmacy",
+        "University" : "Yarmouk University",
+        "Image" : "https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
+    }
+]
