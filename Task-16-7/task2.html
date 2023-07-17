@@ -8,20 +8,20 @@
 <body>
     <form action="" id="form1">
         <label for="name">Name :</label>
-        <input type="text" name="name" id="name"><br><br>
+        <input type="text" name="name" id="name" required><br><br>
         <label for="age">Age :</label>
-        <input type="text" name="Age" id="age"><br><br>
+        <input type="text" name="Age" id="age" required><br><br>
         <label for="Geander">Geander :</label>
-        <input type="text" name="Geander" id="Geander"><br><br>
+        <input type="text" name="Geander" id="Geander" required><br><br>
         <label for="image">Your Image :</label>
-        <input type="text" name="image" id="image"><br><br>
+        <input type="file" name="image" id="image"><br><br>
         <label for="barithday">Birthday :</label>
-        <input type="date" name="barithday" id="barithday"><br><br>
+        <input type="date" name="barithday" id="barithday" required><br><br>
         <hr> <br>
         <label for="des">Description :</label>
         <input type="text" name="Description" id="Description"><br> <br>
         <label for="major">Major & university :</label>
-        <input type="text" name="major" id="major"> <br><br>
+        <input type="text" name="major" id="major" required> <br><br>
         <label for="programing language">programing Language :</label>
         <input type="checkbox" name="lang1" id="html"  class="cheack">
         <label for="html">HTML</label>
@@ -31,11 +31,15 @@
         <label for="js">JS</label><br><br>
         <hr> <br>
         <label for="sbilings">sbilings number :</label> <br>
-        <input type="text" name="sbilings" id="sbilings"><br><br>
+        <input type="text" name="sbilings" id="sbilings" required><br><br>
         <label for="Desc">description of siblings :</label><br>
         <input type="text" name="Desc" id="Desc"> <br><br>
         <input type="submit">
     </form>
+
+    <div id="card1" ></div>
+    <div id="card2"></div>
+    <div id="card3"></div>
     <script src="task2.js"></script>
 </body>
 </html>
