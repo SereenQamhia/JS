@@ -1,19 +1,3 @@
-// function disply(){
-// const x = new XMLHttpRequest();
-// x.open('GET', 'Task.js');
-// x.onload = function() {
-//  const m = JSON.parse(this.responseText);
-//  document.getElementById("butt")}
-//  x.send();
-// let v = getElementById("butt").addeventListener("click", clickb)
-// function clickb(){
-//     `<tr>`+`<td>`
-
-
-
-
-
-// }}
 function disply(){
     const x=new XMLHttpRequest();
     x.open("GET","Task.json");
