@@ -96,10 +96,21 @@ and return array of these two numbers and the numbers between them
 Ex: usAndNumberBeetweenUs(2,5) => [2,3,4,5]
 */
 
-function usAndNumberBeetweenUs(x,y){
+function usAndNumberBeetweenUs(start, end) {
+  if (start > end) {
+    [start, end] = [end, start];
+  }
 
-
+  const numbersBetween = Array.from({ length: end - start + 1 }, (_, index) => start + index);
+  return numbersBetween.reduce((result, num) => {
+    result.push(num);
+    return result;
+  }, []);
 }
+
+console.log(usAndNumberBeetweenUs(2, 5)); 
+console.log(usAndNumberBeetweenUs(5, 2)); 
+console.log(usAndNumberBeetweenUs(-3, 1));
 
 
 
@@ -114,7 +125,10 @@ and return an array of even number only
 
 Ex: evenOnly([1,8,6,4]) => [8,6,4]
 */
-
+function evenOnly(arr) {
+  return arr.filter((num) => num % 2 === 0);
+}
+console.log(evenOnly([1,8,6,4]))
 
 /*
 7
@@ -124,7 +138,10 @@ and return an array of these number that is a mutiply by 4
 
 Ex: multiFour([1,8,6,4]) => [8,4]
 */
-
+function multiFour(arr){
+  return arr.filter((num)=>num%4 ===0)
+}
+console.log(multiFour([1,8,6,4]))
 
 /*
 8
@@ -137,8 +154,11 @@ and return an array of these string that contain this char
 Ex: containChar(["hello","world"],w) => ["world"]
 Ex: containChar(["hello","world"],l) => ["hello","world"]
 */
-
-
+function containChar(arr, chr) {
+  return arr.filter((str) => str.includes(chr));
+}
+console.log(containChar(["hello","world"],"w"))
+console.log(containChar(["hello","world"],"l"))
 /*
 9
 Create a function called evenIndexOddLength
@@ -148,7 +168,12 @@ and return an array that have the string with odd length in even index
 var strings= ["alex","mercer","madrasa","rashed2","emad","hala"]
 Ex: evenIndexOddLength(strings) => ["madrasa"]
 */
+function evenIndexOddLength(strings) {
+  return strings.filter((str, index) => index % 2 === 0 && str.length % 2 !== 0);
+}
 
+var strings = ["alex", "mercer", "madrasa", "rashed2", "emad", "hala"];
+console.log(evenIndexOddLength(strings)); 
 
 /*
 10
@@ -159,7 +184,17 @@ and return the person that have age older than this number
 
 Ex: olderThan(persons,56) => [{ name: { first: 'Soso', last: 'Al-Amora' }, age: 67 }]
 */
+const persons2 = [
+  { name: { first: 'John', last: 'Doe' }, age: 45 },
+  { name: { first: 'Jane', last: 'Smith' }, age: 32 },
+  { name: { first: 'Soso', last: 'Al-Amora' }, age: 67 },
+];
 
+function olderThan(personsArray, minAge) {
+  return personsArray.filter((person) => person.age > minAge);
+}
+
+console.log(olderThan(persons2, 56));
 /*
 11
 Create a function called shorterThan
@@ -169,6 +204,11 @@ and return the shorter string than the number
 var strings= ["alex","mercer","madrasa","rashed2","emad","hala"]
 Ex: shorterThan(strings,5) => ["alex","emad","hala"]
 */
+function shorterThan(strings, maxLength) {
+  return strings.filter((str) => str.length < maxLength);
+}
 
+const strings2 = ["alex", "mercer", "madrasa", "rashed2", "emad", "hala"];
+console.log(shorterThan(strings2, 5)); 
 
 // if you finish the exercises review the material of the week and help your classmate

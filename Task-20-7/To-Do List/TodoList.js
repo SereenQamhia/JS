@@ -1,5 +1,4 @@
 
-localStorage.clear()
 let container = document.getElementById('box');
 let tasknameInput = document.getElementById('taskname');
 let addButton = document.getElementById("add");
@@ -33,6 +32,7 @@ function displayTasks() {
 
     let taskName = document.createElement("span");
     taskName.textContent = task;
+    taskName.style.fontSize = "20px";
     row.appendChild(taskName);
 
     let del = document.createElement("button");
@@ -81,13 +81,35 @@ searchInput.addEventListener("input", () => {
   let searchTerm = searchInput.value.trim().toLowerCase();
   let filteredTasks = tasksArray.filter(task => task.toLowerCase().includes(searchTerm));
   tasksDiv.innerHTML = ''; // Clear the previous content
-  filteredTasks.forEach(task => {
+  filteredTasks.forEach((task, index) => { // Add the index parameter here
     let row = document.createElement("div");
     row.className = "row";
     let taskNameSpan = document.createElement("span");
     taskNameSpan.textContent = task;
     row.appendChild(taskNameSpan);
     tasksDiv.appendChild(row);
+    let update = document.createElement("button");
+    update.textContent = "Update";
+    let del = document.createElement("button");
+    del.textContent = "Delete";
+    row.appendChild(update);
+    row.appendChild(del);
+    del.addEventListener("click", () => {
+      let originalIndex = tasksArray.indexOf(task); // Get the original index of the task
+      tasksArray.splice(originalIndex, 1); // Remove task from the array
+      saveTasksToLocalStorage(tasksArray); // Save updated tasks to localStorage
+      displayTasks(); // Update the displayed tasks
+    });
+    update.addEventListener("click", () => {
+      let newTaskName = prompt("Enter the new task name:", task);
+      if (newTaskName && newTaskName.trim() !== "") {
+        let originalIndex = tasksArray.indexOf(task); // Get the original index of the task
+        tasksArray[originalIndex] = newTaskName.trim(); // Update task in the array
+        saveTasksToLocalStorage(tasksArray); // Save updated tasks to localStorage
+        displayTasks(); // Update the displayed tasks
+      }
+    });
+  
   });
 });
 
