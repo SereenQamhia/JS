@@ -1,0 +1,37 @@
+#box {
+ background-color: rgb(130, 170, 204);
+ text-align: center;
+ color: aliceblue;
+ padding: 15px;
+}
+#taskname   {
+    width: 80%;
+    height: 50px;
+    margin: 20px 0px 15px 0px ;
+   
+
+}
+#search {
+
+    width: 50%;
+    height: 50px; 
+    
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  .row button {
+    background-color: #052863;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
